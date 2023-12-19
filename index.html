@@ -1049,5 +1049,19 @@ padding-right: 10px;
         </div>   </div>
     </footer>
 
+<amp-state id="myState">
+  <script type="application/json">
+    {
+      "visible": true
+    }
+  </script>
+</amp-state>
+
+<!-- Kullanıcı etkileşim bağlantısı -->
+<a on="tap:AMP.setState({myState: {visible: !myState.visible}})">Bağlantı</a>
+
+<!-- Duruma bağlı görüntülenen içerik -->
+<amp-img src="https://taraftariumizle.pro/m.jpg" width="300" height="200" [class]="myState.visible ? 'visible' : 'hidden'"></amp-img>
+
 </body>
 </html>
